@@ -20,14 +20,7 @@ const connectionState = select('.state');
 const connectionStateSection = select('.connection-state');
 
 
-function checkWindowWidth() {
-    return window.innerWidth;
-}
-
-function checkWindowHeight() {
-    return window.innerHeight;
-}
-
+// Checking Operating System
 function checkOS() {
     return window.navigator.userAgent.indexOf("Windows") !== -1 ? "Windows" :
            window.navigator.userAgent.indexOf("Mac OS") !== -1 ? "Mac OS" :
@@ -35,10 +28,12 @@ function checkOS() {
            "Null";
 }
 
+// Checking language used
 function checkLanguage() {
     return navigator.language;
 }
 
+// Checking Browser name
 function checkBrowser() {
     return window.navigator.userAgent.indexOf("Edg") !== -1 ? "Microsoft Edge" :
            window.navigator.userAgent.indexOf("OPR") !== -1 ? "Opera" :
@@ -49,10 +44,21 @@ function checkBrowser() {
            "Null";
 }
 
+// Getting the dimensions of screen
+function checkWindowWidth() {
+    return window.innerWidth;
+}
+
+function checkWindowHeight() {
+    return window.innerHeight;
+}
+
+// Checking orientation
 function checkOrientation() {
     return innerWidth > innerHeight ? 'Landscape' : 'Portrait';
 }
 
+// Fetching details about the battery level and its status
 function batteryState(battery) {
     batteryLevel.innerText = `Level: ${battery.level * 100}%`;
     batteryStatus.innerText = `Status: ${battery.charging ? 'charging' : 'idle'}`;
@@ -77,6 +83,8 @@ if ('getBattery' in navigator) {
     batteryStatus.innerText = 'Status: not available';
 }
 
+
+// Checking connectivity
 const readSystem = () => {
     screenWidth.innerText = `Width: ${checkWindowWidth()}px`;
     screenHeight.innerText = `Height: ${checkWindowHeight()}px`;
