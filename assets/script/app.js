@@ -29,15 +29,10 @@ function checkWindowHeight() {
 }
 
 function checkOS() {
-    if (window.navigator.userAgent.indexOf("Windows") != -1) {
-        return "Windows";
-    } else if (window.navigator.userAgent.indexOf("Mac OS") != -1) {
-        return "Mac OS";
-    } else if (window.navigator.userAgent.indexOf("Linux") != -1) {
-        return "Linux";
-    } else {
-        return "Null";
-    }
+    return window.navigator.userAgent.indexOf("Windows") !== -1 ? "Windows" :
+           window.navigator.userAgent.indexOf("Mac OS") !== -1 ? "Mac OS" :
+           window.navigator.userAgent.indexOf("Linux") !== -1 ? "Linux" :
+           "Null";
 }
 
 function checkLanguage() {
@@ -45,21 +40,13 @@ function checkLanguage() {
 }
 
 function checkBrowser() {
-    if (window.navigator.userAgent.indexOf("Edg") != -1) {
-        return "Microsoft Edge";
-    } else if (window.navigator.userAgent.indexOf("OPR") != -1) {
-        return "Opera"; 
-    } else if (window.navigator.userAgent.indexOf("Chrome") != -1) {
-        return "Chrome"; 
-    } else if (window.navigator.userAgent.indexOf("Firefox") != -1) {
-        return "Firefox";
-    } else if (window.navigator.userAgent.indexOf("Safari") != -1) {
-        return "Safari";
-    } else if (window.navigator.userAgent.indexOf("MSIE") != -1 ||  window.navigator.userAgent.indexOf("rv:") != -1) {
-        return "Internet Explorer";
-    } else {
-        return "Null";
-    }
+    return window.navigator.userAgent.indexOf("Edg") !== -1 ? "Microsoft Edge" :
+           window.navigator.userAgent.indexOf("OPR") !== -1 ? "Opera" :
+           window.navigator.userAgent.indexOf("Chrome") !== -1 ? "Chrome" :
+           window.navigator.userAgent.indexOf("Firefox") !== -1 ? "Firefox" :
+           window.navigator.userAgent.indexOf("Safari") !== -1 ? "Safari" :
+           (window.navigator.userAgent.indexOf("MSIE") !== -1 || window.navigator.userAgent.indexOf("rv:") !== -1) ? "Internet Explorer" :
+           "Null";
 }
 
 function checkOrientation() {
