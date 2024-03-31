@@ -1,4 +1,4 @@
-## Exploring the window object
+# Exploring the window object
 The window object in JavaScript stands for the current web page that is being
 seen in a browser window. It gives access to the browser’s methods and
 attributes as the global object in the browser environment. The window object is
@@ -8,3 +8,6 @@ window or frames that the JavaScript code is running in.
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+## Demo
+Click [here](https://navjot0210.github.io/client-detection-app/) to test the application.
